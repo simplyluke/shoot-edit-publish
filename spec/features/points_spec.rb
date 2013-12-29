@@ -1,12 +1,11 @@
 require 'spec_helper'
 
-describe "Points" do
+describe "PointsPages" do
   subject { page }
 
   let(:user) { FactoryGirl.create(:user) }
   before { sign_in user }
 
-  describe "point creation" do
+  pending("write tests to let users create new points via their homepage")
 
-  end
 end
