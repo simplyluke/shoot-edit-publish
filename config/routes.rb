@@ -1,5 +1,5 @@
 Shooteditpublish::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout' }
   match '/help',      to: 'static_pages#help',      via: 'get'
   match '/about',     to: 'static_pages#about',     via: 'get'
   match '/jesus',     to: 'static_pages#jesus',     via: 'get'

@@ -10,6 +10,7 @@ describe User do
   it { should respond_to(:username) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:points) }
 
   it { should be_valid }
 
@@ -21,5 +22,10 @@ describe User do
   describe "when email is garbage" do
     before { @user.email = "hafek$%@lkadjf.fe" }
     it { should_not be_valid }
+  end
+
+
+  describe "points association" do
+    pending("write some tests to ensure deletion and correct order")   
   end
 end
