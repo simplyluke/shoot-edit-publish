@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate'
+gem 'devise', '3.2.2'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
