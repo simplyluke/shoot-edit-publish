@@ -12,11 +12,13 @@
       <li> <%= link_to help_path do %>
         <span class="icon ion-help-buoy"></span> Help
       <% end %>
-      <li><%= link_to "Acknowledgements", acknowledgements_path %>
+      <li><%= link_to acknowledgements_path do %>
+        <span class="icon ion-star"></span> Acknowledgements
+      <% end %>
       </li>
       <% if user_signed_in? %>
         <li><%= link_to edit_user_registration_path do %>
-          <span class="glyphicon glyphicon-pencil"></span> Edit Account
+          <span class="icon ion-gear-b"></span> Edit Account
         <% end %>
         </li>
       <% end %>

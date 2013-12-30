@@ -1,5 +1,7 @@
-<div class="row">
-  <div class="col-md-4">
+<div class="row home-buttons">
+  <div class="well col-sm-3">
+    <h3>Shot - 50 Points</h3>
+    <span class="home-icon icon ion-camera"></span>
     <%= form_for @point do |f| %>
       <%= f.hidden_field :activity, :value => "shot" %>
       <%= f.hidden_field :value,  :value => 50 %>
@@ -7,7 +9,9 @@
     <% end %>
   </div>
 
-  <div class="col-md-4">
+  <div class="well col-sm-3 col-sm-offset-1">
+    <h3>Edited - 50 Points</h3>
+    <span class="home-icon icon ion-monitor"></span>
     <%= form_for @point do |f| %>
       <%= f.hidden_field :activity, :value => "edited" %>
       <%= f.hidden_field :value,  :value => 50 %>
@@ -15,7 +19,9 @@
     <% end %>
   </div>
 
-  <div class="col-md-4">
+  <div class="well col-sm-3 col-sm-offset-1">
+    <h3>Published - 100 Points</h3>
+    <span class="home-icon icon ion-upload"></span>
     <%= form_for @point do |f| %>
       <%= f.hidden_field :activity, :value => "published" %>
       <%= f.hidden_field :value,  :value => 100 %>

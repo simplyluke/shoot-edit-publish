@@ -12,6 +12,7 @@ $light: #E4DEDE;
 html, body {
 }
 
+
 /* header */
 
 .navbar {
@@ -74,6 +75,16 @@ footer {
       float: left;
       margin-left: 10px;
     }
+  }
+}
+
+/* home */
+
+.home-buttons {
+  text-align: center;
+
+  .home-icon {
+    font-size: 3em;
   }
 }
 

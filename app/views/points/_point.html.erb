@@ -1,6 +1,16 @@
 <li>
   <div class="point-view">
-    <span class="<%= point.activity %>"></span> | <%= point.value %> points 
+    <% if point.activity == "shot" %>
+    <span class="icon ion-camera"></span> Shot 
+    <% elsif point.activity == "edited" %>
+    <span class="icon ion-monitor"></span> Edited
+    <% elsif point.activity == "published" %>
+    <span class="icon ion-upload"></span> Published
+    <% else %>
+    point.activity
+    <% end %>
+    
+    | <%= point.value %> points 
   </div>
   <span class="posted-ago">Posted <%= time_ago_in_words(point.created_at) %> ago.</span>
   <% if current_user == point.user %>
