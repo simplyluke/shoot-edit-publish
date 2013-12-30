@@ -15,14 +15,16 @@ html, body {
 /* header */
 
 .navbar {
-  border-radius: 0;
-}
-
-.navbar-purple {
   border: none;
-  border-radius: none;
+  border-radius: 0;
   background: $mainPurple;
-  a {
+  a.navbar-brand {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: lighter;
+    letter-spacing: .1em;
+  }
+  a, a:hover, a:focus {
     color: $lightBlue;
   }
   li {  
@@ -32,12 +34,25 @@ html, body {
   }
 }
 
-a.navbar-brand {
-  font-size: 1.8em;
-  color: #ffffff;
-  font-weight: lighter;
-  letter-spacing: .1em;
+/* override bootstrap's stupid defaults that require me to say navbar-default to activate the mobile selector */
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #fff;
 }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: $lightPurple;
+  color: $lightBlue;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $lightBlue;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus  {
+  color: #9A91CF;
+}
+
+
 
 /* footer */
 
@@ -73,3 +88,4 @@ footer {
   color: #b94a48;
   background: #f2dede;
 }
+
