@@ -14,7 +14,7 @@ describe "Users" do
 
     describe "points" do
       it { should have_content(p1.value) }
-      it { should have_content(p2.activity) }
+      it { should have_content(p2.value) }
 
       it { should have_content(user.points.sum('value')) }
     end

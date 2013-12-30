@@ -3,9 +3,5 @@ require 'spec_helper'
 describe "PointsPages" do
   subject { page }
 
-  let(:user) { FactoryGirl.create(:user) }
-  before { sign_in user }
-
-  pending("write tests to let users create new points via their homepage")
-
+  pending("Figure out how to implement tests signing in with devise")
 end

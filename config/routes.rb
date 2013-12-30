@@ -8,6 +8,7 @@ Shooteditpublish::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
+  resources :points, path: "/points"
   resources :users, only: :index
   resources :users, path: "", only: :show
   # Example of regular route:
