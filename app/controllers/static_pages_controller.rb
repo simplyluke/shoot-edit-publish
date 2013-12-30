@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  def acknowledgements
+  end
+
   def jesus
   end
 end
