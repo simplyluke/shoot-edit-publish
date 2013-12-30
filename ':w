@@ -1,9 +1,0 @@
-<li>
-  <div class="point-view">
-    <span class="<%= point.activity %>"></span> | <%= point.value %> points 
-  </div>
-  <span class="posted-ago">Posted <%= time_ago_in_words(point.created_at) %> ago.</span>
-  <% if current_user == point.user %>
-  <%= link_to "delete", points_path, method: :delete, data: { confirm: "Sure you want to delete?" } %>
-  <% end %>
-</li>

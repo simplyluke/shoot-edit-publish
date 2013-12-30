@@ -1,5 +1,13 @@
+<% if user_signed_in? %>
+  <h1>Shoot Edit Publish</h1>
+  <h2>Today I...</h2>
+  <%= render 'new' %>
+<% else %>
+
 <div class="jumbotron">
   <h1>Shoot Edit Publish</h1>
   <p>Shoot Edit Publish makes your photography workflow fun, social, and rewarding! Gain points while becoming a better photographer.</p>
   <%= link_to "Sign up now!", new_user_registration_path, class: 'btn btn-primary btn-lg', role: 'button' %>
 </div>
+
+<% end  %>

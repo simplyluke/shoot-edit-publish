@@ -8,6 +8,8 @@ describe "StaticPages" do
 
     it { should have_title('Shoot Edit Publish') }
     it { should_not have_title('Shoot Edit Publish |') }
+
+    pending("write tests for signed in home page with functions to add points")
   end
 
   describe "About page" do

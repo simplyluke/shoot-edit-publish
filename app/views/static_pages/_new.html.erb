@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4">
+    <%= form_for @point do |f| %>
+      <%= f.hidden_field :activity, :value => "shot" %>
+      <%= f.hidden_field :value,  :value => 50 %>
+    <%= f.submit "Shot", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form_for @point do |f| %>
+      <%= f.hidden_field :activity, :value => "edited" %>
+      <%= f.hidden_field :value,  :value => 50 %>
+    <%= f.submit "Edited", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form_for @point do |f| %>
+      <%= f.hidden_field :activity, :value => "published" %>
+      <%= f.hidden_field :value,  :value => 100 %>
+    <%= f.submit "Published", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
