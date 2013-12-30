@@ -26,6 +26,20 @@ describe User do
 
 
   describe "points association" do
-    pending("write some tests to ensure deletion and correct order")   
+    before { @user.save }
+
+    let!(:older_point) { FactoryGirl.create(:point, user: @user, created_at: 1.week.ago) }
+    let!(:newer_point) { FactoryGirl.create(:point, user: @user, created_at: 2.days.ago) }
+
+
+    it "Should destroy associated points" do
+
+      points = @user.points.to_a
+      @user.destroy
+      expect(points).not_to be_empty
+      points.each do |point|
+        expect(Point.where(id: point.id)).to be_empty
+      end
+    end
   end
 end

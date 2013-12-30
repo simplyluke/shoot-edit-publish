@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229191207) do
+ActiveRecord::Schema.define(version: 20131230042617) do
 
   create_table "points", force: true do |t|
     t.integer  "value"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.string   "activity"
   end
 
   add_index "points", ["user_id", "created_at"], name: "index_points_on_user_id_and_created_at"

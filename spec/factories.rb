@@ -8,6 +8,7 @@ FactoryGirl.define do
 
   factory :point do
     value 50
+    activity 'shot'
     user
   end
 end

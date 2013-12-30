@@ -21,10 +21,4 @@ describe "StaticPages" do
 
     it { should have_title('Shoot Edit Publish | Help') }
   end
-
-  describe "jesus easter egg" do
-    before { visit jesus_path }
-
-    it { should have_title('Shoot Edit Publish | Jesus') }
-  end
 end

@@ -2,15 +2,14 @@ require 'spec_helper'
 
 describe Point do
 
-  let(:user) { FactoryGirl.create(:user) }
-  before { @point = user.points.build(value: 50) }
+  before { @point = FactoryGirl.create(:point) }
 
   subject { @point }
 
   it { should respond_to(:value) }
   it { should respond_to(:user_id) }
   it { should respond_to(:user) }
-  its(:user) { should eq user }
+  it { should respond_to(:type) }
 
   it { should be_valid }
 

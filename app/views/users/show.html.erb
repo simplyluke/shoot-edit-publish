@@ -1,0 +1,20 @@
+<% provide(:title, @user.username) %>
+
+<h1><%= @user.username %></h1>
+
+
+<% if @user.points.any? %>
+
+<h3>Total Points: <strong><%= @user.points.sum('value') %></strong></h3>
+
+<ul>
+  <%= render @points %>
+</ul>
+
+<%= will_paginate @points %>
+
+<% else %>
+
+<h3>No points!</h3>
+
+<% end %>
