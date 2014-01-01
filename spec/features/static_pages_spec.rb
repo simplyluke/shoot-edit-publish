@@ -9,7 +9,18 @@ describe "StaticPages" do
     it { should have_title('Shoot Edit Publish') }
     it { should_not have_title('Shoot Edit Publish |') }
 
-    pending("write tests for signed in home page with functions to add points")
+    describe "with a signed in user" do
+      let(:user) { FactoryGirl.create(:user) }
+      before { sign_in user }
+
+      it { should have_content('Today I...') }
+
+      describe "point creation" do
+        it "should create a new point listing" do
+          expect { click_button "Shot" }.to change(Point, :count).by(1)
+        end
+      end
+    end
   end
 
   describe "About page" do

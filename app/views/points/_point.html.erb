@@ -17,7 +17,7 @@
   <span class="posted-ago">Posted <%= time_ago_in_words(point.created_at) %> ago.</span>
   <% if current_user == point.user %>
   <%= link_to point, method: :delete, class: 'delete-point', data: { confirm: "Sure you want to delete?" } do %>
-    <span class="icon ion-trash-b"></span> Delete
-  <% end %>
+   <span class="icon ion-trash-b"></span> Delete
+  <% end %> 
   <% end %>
 </li>
