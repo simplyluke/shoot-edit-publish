@@ -4,14 +4,14 @@
 
 
 <% if @user.points.any? %>
+<div class="col-md-3 col-sm-5">
+  <h3>Total Points: <strong><%= @user.points.sum('value') %></strong></h3>
+  <ul class="point-list ">
+    <%= render @points %>
+  </ul>
 
-<h3>Total Points: <strong><%= @user.points.sum('value') %></strong></h3>
-
-<ul>
-  <%= render @points %>
-</ul>
-
-<%= will_paginate @points %>
+  <%= will_paginate @points %>
+</div>
 
 <% else %>
 

@@ -88,6 +88,27 @@ footer {
   }
 }
 
+/* user show */
+
+.point-list {
+  list-style: none;
+  text-align: center;
+}
+
+.point-listing {
+  padding: 10px 0;
+  border-bottom: 1px solid $mediumGray;
+}
+
+.point-activity {
+  font-size: 1.3em;
+}
+
+.delete-point {
+  display: block;
+  font-size: 0.9em;
+}
+
 /* rewrite alerts */
 
 .alert-notice {

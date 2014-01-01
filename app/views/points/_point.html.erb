@@ -1,5 +1,6 @@
-<li>
-  <div class="point-view">
+<li class="point-listing">
+  <div>
+    <div class="point-activity">
     <% if point.activity == "shot" %>
     <span class="icon ion-camera"></span> Shot 
     <% elsif point.activity == "edited" %>
@@ -11,9 +12,12 @@
     <% end %>
     
     | <%= point.value %> points 
+    </div>
   </div>
   <span class="posted-ago">Posted <%= time_ago_in_words(point.created_at) %> ago.</span>
   <% if current_user == point.user %>
-  <%= link_to "delete", point, method: :delete, data: { confirm: "Sure you want to delete?" } %>
+  <%= link_to point, method: :delete, class: 'delete-point', data: { confirm: "Sure you want to delete?" } do %>
+    <span class="icon ion-trash-b"></span> Delete
+  <% end %>
   <% end %>
 </li>
