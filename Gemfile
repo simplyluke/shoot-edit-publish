@@ -48,7 +48,7 @@ group :doc do
 end
 
 group :production do
-  gem 'mysql'
+  gem 'pg'
 end
 
 # Use ActiveModel has_secure_password
