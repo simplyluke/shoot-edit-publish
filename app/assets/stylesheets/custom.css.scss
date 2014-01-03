@@ -70,6 +70,14 @@ footer {
   padding-top: 10px;
   border-top: 1px solid $mediumGray;
   color: $mediumGray;
+  .social-icons {
+    font-size: 1.5em;
+    text-align: right;
+
+    a {
+      margin: 0 5px;
+    }
+  }
 
   small {
     float: left;

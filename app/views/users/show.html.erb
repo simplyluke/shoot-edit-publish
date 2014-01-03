@@ -1,11 +1,11 @@
 <% provide(:title, @user.username) %>
-
 <h1><%= @user.username %></h1>
 
 
 <% if @user.points.any? %>
 <div class="col-md-3 col-sm-5">
   <h3>Total Points: <strong><%= @user.points.sum('value') %></strong></h3>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-count="none" data-via="shoot_edit" data-text="Check out my progress on Shoot Edit Publish, I have <%= @user.points.sum('value') %> points so far! shootedit.net<%= url_for @user %>">Tweet</a>
   <ul class="point-list ">
     <%= render @points %>
   </ul>
@@ -18,3 +18,5 @@
 <h3>No points!</h3>
 
 <% end %>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
