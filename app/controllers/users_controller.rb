@@ -7,6 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_username(params[:id])
-    @points = @user.points.paginate(page: params[:page])
+    @points = @user.points.paginate(page: params[:page], :per_page => 5)
   end
 end
