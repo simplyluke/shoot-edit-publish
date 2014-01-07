@@ -6,8 +6,8 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: font-url('ionicons.eot');
-  src: font-url('ionicons.eot') format("embedded-opentype"), font-url('ionicons.ttf') format("truetype"), font-url('ionicons.woff') format("woff");
+  src: asset-url('ionicons.eot');
+  src: asset-url('ionicons.eot') format("embedded-opentype"), font-url('ionicons.ttf') format("truetype"), font-url('ionicons.woff') format("woff");
   font-weight: normal;
   font-style: normal; }
 
